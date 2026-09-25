@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+ <meta charset="UTF-8">
+ <title>tos's Portfolio</title>
+ <link rel="stylesheet" href="style.css">
+ <script src="script.js" async></script>
+</head>
+<body>
+    <header>
+        <h1>tos's Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#works">Works</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about" class="about">
+            <h2>About Me</h2>
+            <div class="word-board">
+            今日の意気込み：<span id="random-word">ここに言葉が出ます</span>
+            </div>
+            <button type="button" id="toggle-profile-btn">経歴の詳細を表示</button>
+            <div id="profile-casual">
+            <p>10月末までにWebエンジニア就職を目指して猛勉強中です！</p>
+            </div>
+
+            <div id="profile-detail" class="hidden">
+                <p> 【現在の強み】データの流れ（ロジック）を意識したjavascriptの開発が得意です。エラーが発生した際も、HTML/CSSとの連動性や変数のスコープを意識して、自力で原因を特定・修復するデバック力を日々鍛えています</p>
+            </div>
+            <h3>Skills</h3>
+            <ul class="skill-list">
+                <li>HTML5 / CSS3 （レスポンシブ・アニメーション対応）</li>
+                <li>Javascript (LocalStorage・データ自動再描画設計）</li> 
+            </ul>
+        </section>
+        
+        <section id="works" class="works">
+            <h2>Works (制作実績)</h2>
+
+            <div class="works-grid">
+                <article class="works-card todo-app">
+                <h3>TODOアプリ</h3>
+                <p>JSで開発中</p>
+                
+                <div class="input-area">
+                    <input type="text" id="todo-input" placeholder="タスクを入力">
+                    <button type="button" id="add-button">追加</button>
+                </div>
+                <ul id="todo-list">
+
+                </ul>
+                </article>
+                <article class="works-card rps-game">
+                    <h3>じゃんけんゲーム</h3>
+                    <div class="rps-buttons">
+                        <button type="button" id="rock-btn">✊</button>
+                        <button type="button" id="scissors-btn">✌</button>
+                        <button type="button" id="paper-btn">✋</button>
+                    </div>
+                    <div id="rps-result">
+                        じゃんけんを始めよう！
+                    </div>
+                    </article>
+                <article class="works-card slot-game">
+                    <h3>スロットゲーム</h3>
+
+                    <div class="coin-area">
+                    <span>持ちコイン</span>
+                    <span id="coin-count">100</span>枚
+                    </div>
+
+                    <div id="game-over-message" class="hidden"> 
+                        ゲームオーバー！コインが足りません
+                    </div>
+
+                    <div class="slot-display">
+
+                        <span id="num-1">7</span>
+                        <span id="num-2">7</span>
+                        <span id="num-3">7</span>
+                    </div>
+                    <button type="button" id="spin-button">スピン！</button>
+                </article>
+            </div>
+        </section>
+        <section id="contact" class="contact">
+            <h2>Contact （お問い合わせ）</h2>
+            <div class="works-card">
+                <p>ご意見・メッセージをどうぞ(20文字以内)</p>
+                <textarea id="contact-text" placeholder="ここにメッセージを入力" maxlength="20"></textarea>
+                <p>現在の文字数：<span id="char-count">0</span>/20文字</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 tos</p>
+    </footer>
+
+</body>
+</html>
