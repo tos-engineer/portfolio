@@ -287,3 +287,18 @@ li {
     color: #ff4757;
     text-shadow: 0 0 10px #ff4757;
 }
+
+.rps-score{
+    display:flex;
+    gap:15px;
+    justify-content: center;
+    margin:15px 0;
+    background-color: #0b0d13;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.rps-score span{
+    color:#ffffff !important;
+
+}

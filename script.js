@@ -158,6 +158,15 @@ const scissorsBtn = document.getElementById("scissors-btn");
 const paperBtn = document.getElementById("paper-btn");
 const rpsResult = document.getElementById("rps-result");
 
+const winCountText = document.getElementById("win-count");
+const loseCountText = document.getElementById("lose-count");
+const drawCountText = document.getElementById("draw-count");
+
+let winCount = 0;
+let loseCount = 0;
+let drawCount = 0;
+
+
 const rpsHands = ["✊グー","✌チョキ","✋パー"];
 
 rockBtn.addEventListener("click",function(){
@@ -183,6 +192,7 @@ function playRPS(userHand){
 
     if(userHand === comHand){
         resultMessage = "引き分け！👐（敵も" + comHand +")";
+        drawCount++;
     }else if(
         (userHand === "✊グー" && comHand === "✌チョキ") ||
         (userHand === "✌チョキ" && comHand === "✋パー") ||
@@ -190,10 +200,16 @@ function playRPS(userHand){
     ){
         resultMessage = "あなたの勝ち！（敵は" + comHand + ")";
         rpsResult.classList.add("win-style");
+        winCount++;
 
     }else{
         resultMessage = "あなたの負け・・・（敵は" + comHand + ")";
         rpsResult.classList.add("lose-style");
+        loseCount++;
     }
     rpsResult.textContent = resultMessage;
+
+    winCountText.textContent = winCount;
+    loseCountText.textContent = loseCount;
+    drawCountText.textContent = drawCount;
 }
