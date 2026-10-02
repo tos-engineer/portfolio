@@ -213,3 +213,39 @@ function playRPS(userHand){
     loseCountText.textContent = loseCount;
     drawCountText.textContent = drawCount;
 }
+
+const rpsResetBtn =document.getElementById("rps-reset-btn");
+
+rpsResetBtn.addEventListener("click",function(){
+    winCount = 0;
+    loseCount = 0;
+    drawCount = 0;
+
+    rpsResult.textContent = "勝敗はここまでです";
+
+    winCountText.textContent = winCount;
+    loseCountText.textContent = loseCount;
+    drawCountText.textContent = drawCount;
+});
+
+const htmlSkill = document.getElementById("html-skill");
+const jsSkill = document.getElementById("js-skill");
+const skillDescBox = document.getElementById("skill-desc-box");
+const skillDescText = document.getElementById("skill-desc-text");
+
+htmlSkill.addEventListener("mouseenter",function(){
+    skillDescBox.classList.remove("hidden");
+    skillDescText.textContent = "【HTML/CSS実績】固定ヘッダー、FlexBoxによるスマホ用の自動折り返し、そして勝敗時のネオン発光エフェクトまで、崩れないマルチデバイス対応のデザインを実務レベルで実装出来ます";
+});
+
+jsSkill.addEventListener("mouseenter",function(){
+    skillDescBox.classList.remove("hidden");
+    skillDescText.textContent = "【JavaaScript実績】Math.randomを使ったゲームロジックから、配列操作によるTODOアプリの自動再描画（render）、LocalStorageを使ったプラウザへの永続保存まで、裏側のデータ管理を網羅しています";
+});
+
+htmlSkill.addEventListener("mouseleave",function(){
+    skillDescText.textContent="ここに解説がでます";
+});
+jsSkill.addEventListener("mouseleave",function(){
+    skillDescText.textContent="ここに解説がでます";
+});

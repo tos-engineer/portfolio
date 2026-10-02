@@ -302,3 +302,45 @@ li {
     color:#ffffff !important;
 
 }
+.rps-game #rps-reset-btn{
+    background-color: #ef4444;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    padding: 6px 12px;
+    margin-top: 10px;
+    border-radius: 4px;
+    transition: 0.2s;
+
+}
+
+.rps-game #rps-reset-btn:hover{
+    transform: scale(1.1);
+    background-color: #dc2626;
+}
+
+.skill-list li {
+    cursor: pointer;
+    transition:0.3s;
+}
+
+#skill-desc-box{
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #1e293b;
+    border-left: 4px solid #38bdf8;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #cbd5e1 !important;
+    transition: all 0.2s;
+}
+
+#skill-desc-text{
+    margin: 0;
+}
+
+.skill-list li:hover{
+    color: #38bdf8 !important;
+    text-shadow: 0 0 8px #38bdf8;
+}

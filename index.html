@@ -33,9 +33,12 @@
             </div>
             <h3>Skills</h3>
             <ul class="skill-list">
-                <li>HTML5 / CSS3 （レスポンシブ・アニメーション対応）</li>
-                <li>Javascript (LocalStorage・データ自動再描画設計）</li> 
+                <li id="html-skill">HTML5 / CSS3 （レスポンシブ・アニメーション対応）</li>
+                <li id="js-skill">Javascript (LocalStorage・データ自動再描画設計）</li> 
             </ul>
+            <div id="skill-desc-box">
+                <p id="skill-desc-text">ここに解説が出ます</p>
+            </div>
         </section>
         
         <section id="works" class="works">
@@ -66,6 +69,7 @@
                         <span>負け：<span id="lose-count">0</span>回</span>
                         <span>引き分け：<span id="draw-count">0</span>回</span>
                     </div>
+                    <button type="button" id="rps-reset-btn">戦績をリセット</button>
                     <div id="rps-result">
                         じゃんけんを始めよう！
                     </div>
