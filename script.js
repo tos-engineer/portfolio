@@ -221,6 +221,7 @@ rpsResetBtn.addEventListener("click",function(){
     loseCount = 0;
     drawCount = 0;
 
+    rpsResult.classList.remove("win-style","lose-style");
     rpsResult.textContent = "勝敗はここまでです";
 
     winCountText.textContent = winCount;
@@ -249,3 +250,33 @@ htmlSkill.addEventListener("mouseleave",function(){
 jsSkill.addEventListener("mouseleave",function(){
     skillDescText.textContent="ここに解説がでます";
 });
+
+
+const typeTarget = document.getElementById("type-target");
+const typeInput = document.getElementById("type-input");
+const typeWords = ["html","css","javascript","const","let","function"];
+
+let currentWord = "";
+
+function startTypingGame(){
+    let newIndex = Math.floor(Math.random() *typeWords.length);
+    while(typeWords[newIndex] === currentWord){
+        newIndex = Math.floor(Math.random() * typeWords.length);
+    }
+
+    
+    currentWord = typeWords[newIndex];
+    typeTarget.textContent = currentWord;
+    typeInput.value = "";
+};
+
+typeInput.addEventListener("keydown",function(event){
+
+    if(event.key === "Enter"){
+        if(typeInput.value === currentWord){ 
+        startTypingGame();
+        }
+    }
+});
+
+startTypingGame();

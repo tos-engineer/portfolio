@@ -19,25 +19,28 @@
 
     <main>
         <section id="about" class="about">
-            <h2>About Me</h2>
-            <div class="word-board">
-            今日の意気込み：<span id="random-word">ここに言葉が出ます</span>
-            </div>
-            <button type="button" id="toggle-profile-btn">経歴の詳細を表示</button>
-            <div id="profile-casual">
-            <p>10月末までにWebエンジニア就職を目指して猛勉強中です！</p>
-            </div>
+            <div class="about-inner">
+            
+                <h2>About Me</h2>
+                <div class="word-board">
+                    今日の意気込み：<span id="random-word">ここに言葉が出ます</span>
+                </div>
+                <button type="button" id="toggle-profile-btn">経歴の詳細を表示</button>
+                <div id="profile-casual">
+                <p>10月末までにWebエンジニア就職を目指して猛勉強中です！</p>
+                </div>
 
-            <div id="profile-detail" class="hidden">
-                <p> 【現在の強み】データの流れ（ロジック）を意識したjavascriptの開発が得意です。エラーが発生した際も、HTML/CSSとの連動性や変数のスコープを意識して、自力で原因を特定・修復するデバック力を日々鍛えています</p>
-            </div>
-            <h3>Skills</h3>
-            <ul class="skill-list">
-                <li id="html-skill">HTML5 / CSS3 （レスポンシブ・アニメーション対応）</li>
-                <li id="js-skill">Javascript (LocalStorage・データ自動再描画設計）</li> 
-            </ul>
-            <div id="skill-desc-box">
-                <p id="skill-desc-text">ここに解説が出ます</p>
+                <div id="profile-detail" class="hidden">
+                    <p> 【現在の強み】データの流れ（ロジック）を意識したjavascriptの開発が得意です。エラーが発生した際も、HTML/CSSとの連動性や変数のスコープを意識して、自力で原因を特定・修復するデバック力を日々鍛えています</p>
+                </div>
+                <h3>Skills</h3>
+                <ul class="skill-list">
+                    <li id="html-skill">HTML5 / CSS3 （レスポンシブ・アニメーション対応）</li>
+                    <li id="js-skill">Javascript (LocalStorage・データ自動再描画設計）</li> 
+                </ul>
+                <div id="skill-desc-box">
+                    <p id="skill-desc-text">ここに解説が出ます</p>
+                </div>
             </div>
         </section>
         
@@ -93,6 +96,14 @@
                         <span id="num-3">7</span>
                     </div>
                     <button type="button" id="spin-button">スピン！</button>
+                </article>
+
+                <article class="works-card typing-game">
+                    <h3>タイピングゲーム</h3>
+
+                    <div id="type-target" class="cyber-display">---</div>
+                    <input type="text" id="type-input" placeholder="ここに入力してスタート">
+
                 </article>
             </div>
         </section>
