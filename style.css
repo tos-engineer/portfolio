@@ -8,6 +8,7 @@ body {
     color:#ffffff;
     padding-top: 100px;
     font-family: sans-serif;
+    line-height: 1.6;
 }
 
 header h1{
@@ -48,7 +49,7 @@ header nav ul li a {
     flex-wrap: wrap;
     max-width: 1100px;
     width: 100%;
-    gap: 24px;
+    gap: 40px 32px;
     justify-content: center;
     margin: 80px auto 0 auto; /* 固定ヘッダーに被らないための余白 */
 }
@@ -415,4 +416,74 @@ li {
       100%{
         box-shadow: 0 0 15px #00ff99;
       }        
+}
+
+#profile-casual p {
+    font-size: 16px;
+}
+
+#profile-detail p{
+    font-size: 16px;
+}
+
+textarea.error{
+    outline: none;
+    border-color : #ff4757;
+    box-shadow: 0 0 8px #ff4757;
+    color: #ff4757 !important;
+}
+
+.works-card.math-game{
+    width: 350px;
+    background-color: #0b0d13 !important;
+    color: #38bdf8 !important;
+    border: 1px solid #38bdf8;
+}
+
+#math-question{
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin: 15px 0;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #38bdf8;
+}
+
+#math-input{
+    width: 100%;
+    padding: 10px;
+    background-color: #1a1e29;
+    border: 1px solid #38bdf8;
+    color: #ffffff;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+#math-input:focus{
+    box-shadow: 0 0 10px #38bdf8;
+}
+
+.math-timer{
+    display:flex;
+    justify-content: center;
+    gap: 8px;
+    background-color: #1a1e29;
+    padding: 6px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #cbd5e1;
+}
+
+#math-time{
+    color: #ff4757 !important;
+    text-shadow: 0 0 8px #ff4757;
+}
+
+#math-time.recovery{
+    color:#38bdf8 !important;
+    text-shadow: 0 0 8px #38bdf8;
 }

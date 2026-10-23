@@ -124,8 +124,10 @@ contactText.addEventListener("input",function(){
     charCount.textContent = textLength;
     if(textLength >= 20){
         charCount.classList.add("error");
+        contactText.classList.add("error");
     }else{
         charCount.classList.remove("error");
+        contactText.classList.remove("error");
     }
 });
 
@@ -280,3 +282,51 @@ typeInput.addEventListener("keydown",function(event){
 });
 
 startTypingGame();
+
+
+const mathQuestion = document.getElementById("math-question");
+const mathInput = document.getElementById("math-input");
+const mathTimeText = document.getElementById("math-time");
+
+let mathAnswer = 0;
+let timeLeft = 10;
+let mathTimer = null;
+
+function makeMathQuestion(){
+    const num1 = Math.floor(Math.random() * 10)+1;
+    const num2 = Math.floor(Math.random() * 10)+1;
+    mathAnswer = num1 + num2;
+    mathQuestion.textContent = num1 + "+" + num2 + " =?";
+    mathInput.value = "";
+}
+
+mathInput.addEventListener("focus",function(){
+    if(mathTimer != null){ return; }
+    
+    mathTimer = setInterval(function(){
+        timeLeft--;
+        mathTimeText.textContent = timeLeft;
+
+        mathTimeText.classList.remove("recovery");
+        
+        if(timeLeft <= 0){
+            clearInterval(mathTimer);
+            mathInput.disabled = true;
+            mathQuestion.textContent = "⏳TIME UP!"
+        }
+
+    }, 1000);
+});
+
+mathInput.addEventListener("keydown",function(event){
+    if(event.key === "Enter"){
+        if(Number(mathInput.value) === mathAnswer){
+            timeLeft = timeLeft +2;
+            if(timeLeft > 10) {timeLeft = 10;}
+            mathTimeText.classList.add("recovery");
+
+            makeMathQuestion();
+        }
+    }
+})
+makeMathQuestion();
