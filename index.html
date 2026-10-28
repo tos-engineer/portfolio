@@ -48,6 +48,24 @@
             <h2>Works (制作実績)</h2>
 
             <div class="works-grid">
+                <article class="works-card math-game">
+                    <h3>計算クイズゲーム</h3>
+                    <div class="math-timer">
+                        残り時間：<span id="math-time">10</span>秒
+                    </div>
+                    
+                    <div id="math-question" class="cyber-display">---</div>
+                    <input type="number" id="math-input" placeholder="答えを入力してEnter">
+                </article>
+
+                <article class="works-card typing-game">
+                    <h3>タイピングゲーム</h3>
+
+                    <div id="type-target" class="cyber-display">---</div>
+                    <input type="text" id="type-input" placeholder="ここに入力してスタート">
+
+                </article>
+
                 <article class="works-card todo-app">
                 <h3>TODOアプリ</h3>
                 <p>JSで開発中</p>
@@ -57,9 +75,9 @@
                     <button type="button" id="add-button">追加</button>
                 </div>
                 <ul id="todo-list">
-
                 </ul>
                 </article>
+
                 <article class="works-card rps-game">
                     <h3>じゃんけんゲーム</h3>
                     <div class="rps-buttons">
@@ -76,45 +94,25 @@
                     <div id="rps-result">
                         じゃんけんを始めよう！
                     </div>
-                    </article>
+                </article>
+
                 <article class="works-card slot-game">
                     <h3>スロットゲーム</h3>
-
                     <div class="coin-area">
                     <span>持ちコイン</span>
                     <span id="coin-count">100</span>枚
                     </div>
-
                     <div id="game-over-message" class="hidden"> 
                         ゲームオーバー！コインが足りません
                     </div>
-
                     <div class="slot-display">
-
                         <span id="num-1">7</span>
                         <span id="num-2">7</span>
                         <span id="num-3">7</span>
                     </div>
                     <button type="button" id="spin-button">スピン！</button>
                 </article>
-
-                <article class="works-card typing-game">
-                    <h3>タイピングゲーム</h3>
-
-                    <div id="type-target" class="cyber-display">---</div>
-                    <input type="text" id="type-input" placeholder="ここに入力してスタート">
-
-                </article>
-
-                <article class="works-card math-game">
-                    <h3>計算クイズゲーム</h3>
-                    <div class="math-timer">
-                        残り時間：<span id="math-time">10</span>秒
-                    </div>
-                    
-                    <div id="math-question" class="cyber-display">---</div>
-                    <input type="number" id="math-input" placeholder="答えを入力してEnter">
-                </article>
+                
             </div>
         </section>
         <section id="contact" class="contact">
